@@ -113,7 +113,7 @@ export function OrderDetail({
           <VStack width="full" flexGrow={1} gap={orderDetailCardGap}>
             <Card width="full">
               <CardHeader>
-                <Stack direction={["column", "column", "row"]} justifyContent="space-between">
+                {/* <Stack direction={["column", "column", "row"]} justifyContent="space-between">
                   <Heading size="md">Products</Heading>
                   {order.Status === "Open" && shippableLineItems?.length && (
                     <ProtectedContent hasAccess={[appPermissions.OrderManager]}>
@@ -128,7 +128,7 @@ export function OrderDetail({
                       </ShipmentModal>
                     </ProtectedContent>
                   )}
-                </Stack>
+                </Stack> */}
               </CardHeader>
               <CardBody>
                 <OrderProducts
@@ -170,7 +170,7 @@ export function OrderDetail({
                 </CardBody>
               </Card>
             )}
-            <Card width="full">
+            {/* <Card width="full">
               <CardHeader>
                 <Stack direction={["column", "column", "row"]} justifyContent="space-between">
                   <Heading size="md">Returns</Heading>
@@ -193,7 +193,7 @@ export function OrderDetail({
               <CardBody>
                 <OrderReturns returns={returns} />
               </CardBody>
-            </Card>
+            </Card> */}
           </VStack>
           <VStack width="full" maxWidth={{xl: "350px"}} flexGrow={1} gap={orderDetailCardGap}>
             {isAdmin && (

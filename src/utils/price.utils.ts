@@ -12,7 +12,7 @@ export const priceHelper = {
 function formatPrice(amount: number): string {
   return new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency: "USD",
+    currency: "CHF",
     currencyDisplay: "symbol"
   }).format(amount)
 }
@@ -20,7 +20,7 @@ function formatPrice(amount: number): string {
 function formatShortPrice(amount: number): string {
   return new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency: "USD",
+    currency: "CHF",
     currencyDisplay: "symbol"
   })
     .format(amount)
@@ -30,7 +30,7 @@ function formatShortPrice(amount: number): string {
 function formatPercentChange(amount: number): string {
   return new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency: "USD",
+    currency: "CHF",
     currencyDisplay: "symbol"
   }).format(amount)
 }

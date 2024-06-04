@@ -34,9 +34,18 @@ export function LineItemTable({lineItems}: LineItemTableProps) {
             <Hide below="md">
               <Th>Unit Price</Th>
             </Hide>
-            <Hide below="sm">
-              <Th>Total</Th>
+            <Hide below="md">
+              <Th>Entry</Th>
             </Hide>
+            <Hide below="md">
+              <Th>Exit</Th>
+            </Hide>
+            <Hide below="md">
+              <Th>License Plate</Th>
+            </Hide>
+            {/* <Hide below="sm">
+              <Th>Total</Th>
+            </Hide> */}
           </Tr>
         </Thead>
         <Tbody>
@@ -70,9 +79,18 @@ export function LineItemTable({lineItems}: LineItemTableProps) {
                 <Hide below="md">
                   <Td>{priceHelper.formatPrice(lineItem.UnitPrice)}</Td>
                 </Hide>
-                <Hide below="sm">
-                  <Td>{priceHelper.formatPrice(lineItem.LineTotal)}</Td>
+                <Hide below="md">
+                  <Td>{lineItem.Specs[0].Value} {lineItem.Specs[1].Value}</Td>
                 </Hide>
+                <Hide below="md">
+                  <Td>{lineItem.Specs[2].Value} {lineItem.Specs[3].Value}</Td>
+                </Hide>
+                <Hide below="md">
+                  <Td>{lineItem.Specs[5].Value}</Td>
+                </Hide>
+                {/* <Hide below="sm">
+                  <Td>{priceHelper.formatPrice(lineItem.LineTotal)}</Td>
+                </Hide> */}
               </Tr>
             )
           })}
