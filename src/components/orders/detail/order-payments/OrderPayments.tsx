@@ -59,7 +59,7 @@ export function OrderPayments({payments, billingAddress, shippingAddress}: Order
               <OrderPayment payment={payment} />
             </VStack>
             <VStack alignItems="start">
-              <TextLabel>Billing Address</TextLabel>
+              {/* <TextLabel>Billing Address</TextLabel> */}
               {billingAddress ? (
                 isSameBillingAsShipping ? (
                   <SingleLineAddress address={billingAddress} />
@@ -67,7 +67,7 @@ export function OrderPayments({payments, billingAddress, shippingAddress}: Order
                   <Text>Same as shipping address</Text>
                 )
               ) : (
-                <Text>No billing address</Text>
+                null
               )}
             </VStack>
           </Stack>

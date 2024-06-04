@@ -12,9 +12,8 @@ interface OrderSummaryProps {
 export function OrderSummary({order, promotions}: OrderSummaryProps) {
   return (
     <>
-      <OrderSummaryItem label="Subtotal" value={priceHelper.formatPrice(order.Total)} />
-      <OrderSummaryItem label="Shipping" value={priceHelper.formatPrice(order.ShippingCost)} />
-      <OrderSummaryItem label="Tax" value={priceHelper.formatPrice(order.TaxCost)} />
+      <OrderSummaryItem label="Subtotal" value={priceHelper.formatPrice(order.Subtotal)} />
+      <OrderSummaryItem label="VAT (8.10%)" value={priceHelper.formatPrice(order.TaxCost)} />
       {promotions.map((promo) => (
         <OrderSummaryItem
           key={promo.ID}

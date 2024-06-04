@@ -25,7 +25,6 @@ export function OrderPayment({payment}: OrderPaymentItemProps) {
   if (payment.Type === "CreditCard" && payment.xp?.CreditCard) {
     return (
       <HStack>
-        <CreditCardIcon fontSize="3xl" cardType={payment?.xp.CreditCard.CardType} />
         <Text>
           {displayCardType(payment.xp.CreditCard.CardType)} ending in {payment.xp.CreditCard.PartialAccountNumber}
         </Text>
